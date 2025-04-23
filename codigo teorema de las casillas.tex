@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{lemma}[theorem]{Lema}
+
+\begin{document}
+
+\section{El teorema de las casillas}
+
+El Teorema de las Casillas, también conocido como Principio del Palomar, es un resultado fundamental en combinatoria.
+
+\begin{theorem}[Teorema de las Casillas]
+Si \( n+1 \) o más objetos son colocados en \( n \) casillas, entonces al menos una casilla contiene dos o más objetos.
+\end{theorem}
+
+\begin{proof}
+Supongamos, para obtener una contradicción, que cada casilla contiene a lo sumo un objeto.
+
+Entonces, si hay \( n \) casillas, el número máximo de objetos que se pueden colocar sin que haya dos en la misma casilla es \( n \).
+
+Pero por hipótesis tenemos \( n+1 \) objetos. Esto excede el número de casillas disponibles si solo permitimos un objeto por casilla.
+
+Por lo tanto, nuestra suposición es incorrecta, y debe haber al menos una casilla que contenga dos o más objetos.
+\end{proof}
+
+\section{Aplicación del teorema}
+
+\begin{corollary}
+En un grupo de 13 personas, al menos dos de ellas han nacido en el mismo mes.
+\end{corollary}
+
+\begin{proof}
+Hay 12 meses en el año. Si 13 personas están distribuidas entre estos 12 meses según su mes de nacimiento, por el Teorema de las Casillas, al menos un mes debe contener a dos personas.
+\end{proof}
+
+\section{Resultado auxiliar}
+
+\begin{lemma}
+Si se distribuyen \( kn + 1 \) objetos en \( n \) casillas, entonces al menos una casilla contiene \( k+1 \) o más objetos.
+\end{lemma}
+
+\begin{proof}
+Supongamos que ninguna casilla contiene más de \( k \) objetos. Entonces, el número total de objetos sería a lo sumo \( kn \).
+
+Pero si tenemos \( kn + 1 \) objetos, esta cantidad excede \( kn \), lo cual contradice nuestra suposición.
+
+Por lo tanto, al menos una casilla contiene \( k+1 \) o más objetos.
+\end{proof}
+
+\end{document}
